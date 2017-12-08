@@ -1,16 +1,18 @@
 import { StackNavigator } from 'react-navigation';
+import AdventureScreen from './containers/AdventureScreen';
+import HomeScreen from './containers/HomeScreen';
 
-const RootNavigator = StackNavigator({
+const RootNavigator = StackNavigator(
+  {
     Home: {
         screen: HomeScreen,
-        navigationOptions: {
-            headerTitle: 'Home',
-        },
     },
     Adventure: {
         screen: AdventureScreen,
     },
-});
+  },
+  { headerMode: 'screen' }
+);
 
 export default RootNavigator;
 
